@@ -1,0 +1,10 @@
+.screen h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #e9ecef;
+  opacity: 0.6;
+}
+
+.screen {
+  margin-top: 2rem;
+}

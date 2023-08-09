@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #212529; */
+  background: linear-gradient(180deg, #0f1218, #1c2331 85%);
+
+  background: linear-gradient(180deg, #0f1218, #1c2331 85%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* This is the Temp CSS */
+
+/* CSS for the Classroom component */
+.classroom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 5px;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin: 2px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 12px;
+  padding: 4px;
+}
+
+.seat:hover {
+  background-color: #b0d6ff;
+}
+
+.seat.reserved {
+  background-color: #ff9999;
+  /* cursor: not-allowed; */
+}
+
+/* Optional: Add some styling to differentiate rows and columns */
+.row:nth-child(odd) .seat {
+  background-color: #e0e0e0;
+}
+
+.row:nth-child(even) .seat {
+  background-color: #f0f0f0;
+}
+
+.seat:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.seat:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+/* Optional: Add some extra space to make the plan look more visually appealing */
+.classroom {
+  padding: 20px;
+}
