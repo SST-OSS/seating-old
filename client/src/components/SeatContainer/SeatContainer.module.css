@@ -10,7 +10,7 @@
 
 .blocks {
 	display: flex;
-	align-items: start;
+	align-items: flex-start;
 	gap: 4.8rem;
 }
 
@@ -54,7 +54,6 @@
 	margin: 2px;
 	color: white;
 }
-
 /* States for the Seat */
 
 .seat:hover {
