@@ -1,71 +1,71 @@
 .studentName {
-  font-size: 1.6rem;
-  line-height: 1.5;
+	font-size: 1.6rem;
+	line-height: 1.5;
 }
 
 .container {
-  padding: 1.2rem 3.2rem;
-  gap: 20px;
+	padding: 1.2rem 3.2rem;
+	gap: 20px;
 }
 
 .blocks {
-  display: flex;
-  align-items: start;
-  gap: 4.8rem;
+	display: flex;
+	align-items: start;
+	gap: 4.8rem;
 }
 
 .blockName {
-  font-size: 4.4rem;
-  color: #5f3dc4;
-  margin-bottom: 1.2rem;
+	font-size: 4.4rem;
+	color: #5f3dc4;
+	margin-bottom: 1.2rem;
 }
 
 .columns {
-  display: flex;
+	display: flex;
 }
 
 .row {
-  display: flex;
-  gap: 1.6rem;
+	display: flex;
+	gap: 1.6rem;
 }
 
 .rows {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 .rowNumber {
-  color: #f1f3f5;
-  font-size: 1.6rem;
+	color: #f1f3f5;
+	font-size: 1.6rem;
 }
 
 .seat {
-  width: 52px;
-  height: 52px;
-  background-color: #303030;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin: 2px;
-  color: white;
+	width: 52px;
+	height: 52px;
+	background-color: #303030;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	margin: 2px;
+	color: white;
 }
 
 /* States for the Seat */
 
 .seat:hover {
-  background-color: #404040;
+	background-color: #404040;
 }
 
 .seat.occupied {
-  background-color: #ff4747;
-  cursor: not-allowed;
+	background-color: #ff4747;
+	cursor: not-allowed;
 }
 
 .seat.selected {
-  background-color: #ffc107;
+	background-color: #ffc107;
 }
