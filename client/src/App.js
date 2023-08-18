@@ -6,7 +6,8 @@ import Header from "./components/Header/Header";
 import SeatContainer from "./components/SeatContainer/SeatContainer";
 import ScreenBox from "./components/UI/ScreenBox";
 
-const [studentData, setStudentData] = useState([]);
+function App() {
+  const [studentData, setStudentData] = useState([]);
 
   useEffect(() => {
     (async () => {
