@@ -6,8 +6,7 @@ import Header from "./components/Header/Header";
 import SeatContainer from "./components/SeatContainer/SeatContainer";
 import ScreenBox from "./components/UI/ScreenBox";
 
-function App() {
-  const [studentData, setStudentData] = useState([]);
+const [studentData, setStudentData] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -22,13 +21,11 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  const newData = generateNewArray(studentData);
-
   return (
     <div className="App">
       <Header />
       <ScreenBox />
-      <SeatContainer data={newData} />
+      <SeatContainer data={studentData} />
     </div>
   );
 }

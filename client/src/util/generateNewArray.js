@@ -17,12 +17,56 @@ const generateNewArray = (studentData) => {
     dateOfMonth
   );
 
+  const empty13 = [
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+  ];
+  const empty4 = [
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+    { name: "", batch: "" },
+  ];
+  const empty1 = [{ name: "", batch: "" }];
+
   if (dateOfMonth > 0 && dateOfMonth <= 10) {
-    newArray = [...batchA, ...batchB, ...batchC];
+    newArray = [
+      ...batchA,
+      ...empty13,
+      ...batchB,
+      ...empty1,
+      ...batchC,
+      ...empty4,
+    ];
   } else if (dateOfMonth > 10 && dateOfMonth <= 20) {
-    newArray = [...batchC, ...batchA, ...batchB];
+    newArray = [
+      ...batchC,
+      ...empty13,
+      ...batchA,
+      ...empty1,
+      ...batchB,
+      ...empty4,
+    ];
   } else if (dateOfMonth > 20 && dateOfMonth <= 31) {
-    newArray = [...batchB, ...batchC, ...batchA];
+    newArray = [
+      ...batchB,
+      ...empty13,
+      ...batchC,
+      ...empty1,
+      ...batchA,
+      ...empty4,
+    ];
   }
 
   console.log(newArray);
@@ -30,7 +74,6 @@ const generateNewArray = (studentData) => {
 };
 
 const shuffleArray = (array, dateOfMonth) => {
-  
   const generator = seedRandom(dateOfMonth);
   const randomNumber = generator();
   for (let i = array.length - 1; i > 0; i--) {
