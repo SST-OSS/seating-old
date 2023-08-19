@@ -1,11 +1,14 @@
-import React from "react";
 import modules from "./Header.module.css";
 
-const Header = () => {
+const Header = ({ onCaptureInput, searchInput }) => {
   const date = new Date();
   const dateOfMonth = date.getDate();
   const month = date.getMonth();
   const year = date.getFullYear();
+
+  const inputChangeHandler = (e) => {
+    onCaptureInput(e.target.value);
+  };
 
   return (
     <div className={modules.header}>
@@ -17,7 +20,7 @@ const Header = () => {
 
       <div className={modules.searchInput}>
         <label>Search Your Name</label>
-        <input type="text" />
+        <input value={searchInput} onChange={inputChangeHandler} type="text" />
       </div>
     </div>
   );
