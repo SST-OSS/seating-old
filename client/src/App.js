@@ -22,13 +22,11 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  const newData = generateNewArray(studentData);
-
   return (
     <div className="App">
       <Header />
       <ScreenBox />
-      <SeatContainer data={newData} />
+      <SeatContainer data={studentData} />
     </div>
   );
 }
