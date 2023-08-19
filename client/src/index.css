@@ -87,3 +87,15 @@ code {
 .classroom {
   padding: 20px;
 }
+
+.seatHigh {
+  background-color: #e7f5ff;
+  color: black;
+  text-transform: capitalize;
+}
+
+.seatNormal {
+  background-color: transparent;
+  color: white;
+  text-transform: capitalize;
+}

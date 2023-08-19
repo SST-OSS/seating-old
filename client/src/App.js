@@ -8,6 +8,7 @@ import ScreenBox from "./components/UI/ScreenBox";
 
 function App() {
   const [studentData, setStudentData] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -22,11 +23,14 @@ function App() {
     return <div>Loading...</div>;
   }
 
+  const captureSearchInput = (input) => {
+    setSearchInput(input);
+  };
+
   return (
     <div className="App">
-      <Header />
-      <ScreenBox />
-      <SeatContainer data={studentData} />
+      <Header value={searchInput} onCaptureInput={captureSearchInput} />
+      <SeatContainer data={studentData} searchText={searchInput} />
     </div>
   );
 }
