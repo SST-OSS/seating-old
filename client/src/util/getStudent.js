@@ -12,10 +12,7 @@ const getStudent = async () => {
 	}
 
 	if (docSnap.exists()) {
-		console.log('Document data:', docSnap.data());
 		data = docSnap.data();
-	} else {
-		console.log('No such document!');
 	}
 	return data;
 };
