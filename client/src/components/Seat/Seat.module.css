@@ -1,19 +1,22 @@
 .name {
-  font-size: 1.6rem;
+	font-size: 1.6rem;
 }
 
 .seat {
-  width: 52px;
-  height: 52px;
-  background-color: #303030;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  margin: 2px;
-  color: white;
+	width: 52px;
+	height: 52px;
+	background-color: #303030;
+	border-radius: 5px;
+	font-size: 12px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	margin: 2px;
+	color: white;
+	padding: 5px;
+}
+
+.seat > p {
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
