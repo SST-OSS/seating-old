@@ -1,1 +1,3 @@
 # client
+- yarn
+- yarn dev

@@ -69,7 +69,6 @@ const generateNewArray = (studentData) => {
 			...empty3,
 		];
 	}
-	console.log(newArray);
 	return newArray;
 };
 
