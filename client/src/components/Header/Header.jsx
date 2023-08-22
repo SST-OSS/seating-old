@@ -14,7 +14,7 @@ const Header = ({ onCaptureInput, searchInput }) => {
       <div className="text-white text-xl">
         <p>{`${dateOfMonth} - ${month} - ${year}`}</p>
       </div>
-      <div className="w-full flex flex-col text-center gap-8">
+      <div className="w-full flex flex-col text-center gap-8 p-4">
         <input
           value={searchInput}
           onChange={inputChangeHandler}
