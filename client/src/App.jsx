@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-[100px]">
       <Header value={searchInput} onCaptureInput={captureSearchInput} />
       <ScreenBox />
       <SeatContainer data={studentData} searchText={searchInput} />
