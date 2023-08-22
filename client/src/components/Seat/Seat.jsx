@@ -20,7 +20,7 @@ const Seat = ({ student, searchText }) => {
 
   return (
     <div>
-      <div className="w-[56px] h-[56px] bg-gray-600 rounded-md cursor-pointer shadow-md p-2 text-lg">
+      <div className="w-[56px] h-[56px] bg-gray-600 rounded-md cursor-pointer shadow-md p-2 text-lg text-center">
         <p
           className={`${
             highlight ? "text-black bg-yellow-200" : "text-white"
