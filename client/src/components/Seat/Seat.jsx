@@ -20,12 +20,12 @@ const Seat = ({ student, searchText }) => {
 
   return (
     <div>
-      <div className="w-[56px] h-[56px] bg-gray-600 rounded-md cursor-pointer shadow-md p-2 text-lg text-center">
-        <p
-          className={`${
-            highlight ? "text-black bg-yellow-200" : "text-white"
-          } capitalize text-ellipsis overflow-hidden`}
-        >
+      <div
+        className={`w-[56px] h-[56px] bg-slate-100 rounded-md cursor-pointer shadow-md p-2 text-lg text-center ${
+          highlight && "bg-purple-300"
+        }`}
+      >
+        <p className={"text-black capitalize text-ellipsis overflow-hidden"}>
           {student?.name.toLowerCase()}
         </p>
       </div>

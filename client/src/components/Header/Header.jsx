@@ -9,9 +9,11 @@ const Header = ({ onCaptureInput, searchInput }) => {
   };
 
   return (
-    <div className="min-w-[100vw] w-full header flex flex-col items-center gap-4 p-4 self-center text-center fixed">
-      <h2 className="text-5xl text-purple-200">SEATING ARRANGEMENT</h2>
-      <div className="text-white text-xl">
+    <div className="min-w-[100vw] w-full flex flex-col items-center gap-4 p-4 self-center text-center fixed">
+      <h2 className="text-5xl text-purple-200 font-bold">
+        SEATING ARRANGEMENT
+      </h2>
+      <div className="text-white text-xl font-bold">
         <p>{`${dateOfMonth} - ${month} - ${year}`}</p>
       </div>
       <div className="w-full flex flex-col text-center gap-8 p-4">
@@ -19,7 +21,7 @@ const Header = ({ onCaptureInput, searchInput }) => {
           value={searchInput}
           onChange={inputChangeHandler}
           type="text"
-          className="rounded-md p-4 text-lg"
+          className="rounded-md p-4 text-lg border-2 border-black"
           placeholder="search your name"
         />
       </div>
