@@ -9,8 +9,8 @@ const Header = ({ onCaptureInput, searchInput }) => {
   };
 
   return (
-    <div className="min-w-[100vw] w-full flex flex-col items-center gap-4 p-4 self-center text-center fixed">
-      <h2 className="text-5xl text-purple-200 font-bold">
+    <div className="min-w-[100vw] w-full flex flex-col items-center gap-4 p-4 self-center text-center fixed bg-stone-800">
+      <h2 className="text-4xl  md:text-5xl text-purple-500 font-bold p-4 bg-white rounded-sm  border-2 ">
         SEATING ARRANGEMENT
       </h2>
       <div className="text-white text-xl font-bold">
