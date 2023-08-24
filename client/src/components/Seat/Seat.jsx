@@ -16,15 +16,17 @@ const Seat = ({ student, searchText }) => {
     }
   }, [searchText, student]);
 
-  const highlightClass = highlight ? `seatHigh` : "seatNormal";
-
   return (
     <div>
-      <div className="w-[56px] h-[56px] bg-gray-600 rounded-md cursor-pointer shadow-md p-2 text-lg text-center">
+      <div
+        className={`w-[56px] h-[56px] rounded-md cursor-pointer shadow-md p-2 text-lg text-center ${
+          highlight ? "bg-purple-300" : "bg-slate-100"
+        }`}
+      >
         <p
-          className={`${
-            highlight ? "text-black bg-yellow-200" : "text-white"
-          } capitalize text-ellipsis overflow-hidden`}
+          className={`text-black capitalize text-ellipsis overflow-hidden ${
+            highlight && "font-bold"
+          }`}
         >
           {student?.name.toLowerCase()}
         </p>

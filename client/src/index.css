@@ -9,12 +9,6 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	/* background-color: #212529; */
-	background: linear-gradient(180deg, #0f1218, #1c2331 85%);;
-}
-
-.header {
-	background: linear-gradient(180deg, #0f1218, #1c2331 85%);
 }
 
 * {
