@@ -14,7 +14,7 @@ const Header = ({ onCaptureInput, searchInput }) => {
         SEATING ARRANGEMENT
       </h2>
       <div className="text-white text-xl font-bold">
-        <p>{`${dateOfMonth} - ${month} - ${year}`}</p>
+        <p>{`${dateOfMonth} - ${month + 1} - ${year}`}</p>
       </div>
       <div className="w-full flex flex-col text-center gap-8 p-4">
         <input

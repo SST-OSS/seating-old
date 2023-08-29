@@ -4,13 +4,12 @@ const { config } = require('dotenv');
 config();
 const fs = require('fs');
 const firebaseConfig = {
-	apiKey: process.env.REACT_APP_apiKey,
-	authDomain: process.env.REACT_APP_authDomain,
-	projectId: process.env.REACT_APP_projectId,
-	storageBucket: process.env.REACT_APP_storageBucket,
-	messagingSenderId: process.env.REACT_APP_messagingSenderId,
-	appId: process.env.REACT_APP_appId,
-	measurementId: process.env.REACT_APP_measurementId,
+	apiKey: process.env.VITE_apiKey,
+	authDomain: process.env.VITE_authDomain,
+	projectId: process.env.VITE_projectId,
+	storageBucket: process.env.VITE_storageBucket,
+	messagingSenderId: process.env.VITE_messagingSenderId,
+	appId: process.env.VITE_appId,
 };
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
