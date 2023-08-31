@@ -39,12 +39,18 @@ const generateNewArray = (studentData) => {
 		{ name: 'BSM', batch: '' },
 	];
 
+	const empty2 = [
+		{ name: '', batch: '' },
+		{ name: '', batch: '' },
+	];
+
 	const empty1 = [{ name: 'BSM', batch: '' }];
 
 	if (dateOfMonth > 0 && dateOfMonth <= 10) {
 		newArray = [
 			...batchA,
 			...empty12,
+			...empty2,
 			...batchB,
 			...empty3,
 			...batchC,
@@ -56,6 +62,7 @@ const generateNewArray = (studentData) => {
 			...empty12,
 			...batchA,
 			...empty1,
+			...empty2,
 			...batchB,
 			...empty3,
 		];
@@ -67,6 +74,7 @@ const generateNewArray = (studentData) => {
 			...empty1,
 			...batchA,
 			...empty3,
+			...empty2,
 		];
 	}
 	return newArray;
