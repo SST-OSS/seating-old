@@ -49,8 +49,8 @@ const generateNewArray = (studentData) => {
 	if (dateOfMonth > 0 && dateOfMonth <= 10) {
 		newArray = [
 			...batchA,
-			...empty12,
 			...empty2,
+			...empty12,
 			...batchB,
 			...empty3,
 			...batchC,
@@ -61,8 +61,8 @@ const generateNewArray = (studentData) => {
 			...batchC,
 			...empty12,
 			...batchA,
-			...empty1,
 			...empty2,
+			...empty1,
 			...batchB,
 			...empty3,
 		];
@@ -73,8 +73,8 @@ const generateNewArray = (studentData) => {
 			...batchC,
 			...empty1,
 			...batchA,
-			...empty3,
 			...empty2,
+			...empty3,
 		];
 	}
 	return newArray;
