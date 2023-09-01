@@ -52,7 +52,7 @@ const generateNewArray = (studentData) => {
 			...empty2,
 			...empty12,
 			...batchB,
-			...empty3,
+			...empty1,
 			...batchC,
 			...empty3,
 		];
