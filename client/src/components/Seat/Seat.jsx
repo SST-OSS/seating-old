@@ -19,7 +19,7 @@ const Seat = ({ student, searchText }) => {
   return (
     <div>
       <div
-        className={`w-[56px] h-[56px] rounded-md cursor-pointer shadow-md p-2 text-lg text-center ${
+        className={`w-[70px] h-[56px] rounded-md cursor-pointer shadow-md p-2 text-xl text-center ${
           highlight ? "bg-purple-300" : "bg-slate-100"
         }`}
       >
