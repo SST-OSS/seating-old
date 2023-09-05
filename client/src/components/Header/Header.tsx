@@ -1,10 +1,15 @@
-const Header = ({ onCaptureInput, searchInput }) => {
+import { ChangeEventHandler, FC } from "react";
+
+const Header: FC<{
+  onCaptureInput: (a: string) => void;
+  searchInput: string;
+}> = ({ onCaptureInput, searchInput }) => {
   const date = new Date();
   const dateOfMonth = date.getDate();
   const month = date.getMonth();
   const year = date.getFullYear();
 
-  const inputChangeHandler = (e) => {
+  const inputChangeHandler: ChangeEventHandler<HTMLInputElement> = (e) => {
     onCaptureInput(e.target.value);
   };
 
