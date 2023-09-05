@@ -1,16 +1,15 @@
-import { ChangeEventHandler, FC } from "react";
+import { type ChangeEventHandler, useContext } from "react";
+import { SearchContext } from "../../contexts/SearchContextProvider";
 
-const Header: FC<{
-  onCaptureInput: (a: string) => void;
-  searchInput: string;
-}> = ({ onCaptureInput, searchInput }) => {
+const Header = () => {
+  const { searchInput, setSearchInput } = useContext(SearchContext);
   const date = new Date();
   const dateOfMonth = date.getDate();
   const month = date.getMonth();
   const year = date.getFullYear();
 
   const inputChangeHandler: ChangeEventHandler<HTMLInputElement> = (e) => {
-    onCaptureInput(e.target.value);
+    setSearchInput(e.target.value);
   };
 
   return (

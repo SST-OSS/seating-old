@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import SeatContainer from "./components/SeatContainer/SeatContainer";
 import { Student } from "./types";
+import SearchContextProvider from "./contexts/SearchContextProvider";
 
 function App() {
   const [studentData, setStudentData] = useState<Student[]>([]);
-  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -27,14 +27,12 @@ function App() {
     );
   }
 
-  const captureSearchInput = (input: string) => {
-    setSearchInput(input);
-  };
-
   return (
     <div className="flex flex-col overflow-hidden bg-stone-900 h-screen">
-      <Header searchInput={searchInput} onCaptureInput={captureSearchInput} />
-      <SeatContainer data={studentData} searchText={searchInput} />
+      <SearchContextProvider>
+        <Header />
+        <SeatContainer data={studentData} />
+      </SearchContextProvider>
     </div>
   );
 }
