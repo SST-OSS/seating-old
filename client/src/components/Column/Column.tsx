@@ -1,13 +1,15 @@
+import { FC } from "react";
 import Seat from "../Seat/Seat";
+import { Student } from "../../types";
 
-const Column = ({
-  rowCount,
-  colCount,
-  startIndex,
-  colName,
-  students,
-  searchText,
-}) => {
+const Column: FC<{
+  rowCount: number;
+  colCount: number;
+  colName: string;
+  startIndex: number;
+  students: Student[];
+  searchText: string;
+}> = ({ rowCount, colCount, startIndex, colName, students, searchText }) => {
   const rows = Array.apply(null, Array(rowCount)).map(function () {});
   const cols = Array.apply(null, Array(colCount)).map(function () {});
   let startId = startIndex;
@@ -19,10 +21,10 @@ const Column = ({
       </h2>
 
       <div className="gap-8 flex flex-col">
-        {rows.map((row, idxRow) => {
+        {rows.map((_, idxRow) => {
           return (
             <div className="flex gap-4" key={idxRow}>
-              {cols.map((col, idx) => {
+              {cols.map((_, idx) => {
                 const student = students[startId++];
                 return (
                   <div key={idx}>

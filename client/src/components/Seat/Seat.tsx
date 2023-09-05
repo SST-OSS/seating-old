@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
+import { Student } from "../../types";
 
-const Seat = ({ student, searchText }) => {
+const Seat: FC<{ student: Student; searchText: string }> = ({
+  student,
+  searchText,
+}) => {
   const [highlight, setHighlight] = useState(false);
   useEffect(() => {
     if (searchText.length === 0) {
