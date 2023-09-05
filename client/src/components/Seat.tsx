@@ -1,24 +1,24 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 import { Student } from "../types";
+import { SearchContext } from "../contexts/SearchContextProvider";
 
-const Seat: FC<{ student: Student; searchText: string }> = ({
-  student,
-  searchText,
-}) => {
+const Seat: FC<{ student: Student }> = ({ student }) => {
+  const { searchInput } = useContext(SearchContext);
+
   const [highlight, setHighlight] = useState(false);
   useEffect(() => {
-    if (searchText.length === 0) {
+    if (searchInput.length === 0) {
       setHighlight(false);
     }
     if (
-      searchText.length >= 3 &&
-      student?.name.toLowerCase().startsWith(searchText.toLowerCase())
+      searchInput.length >= 3 &&
+      student?.name.toLowerCase().startsWith(searchInput.toLowerCase())
     ) {
       setHighlight(true);
     } else {
       setHighlight(false);
     }
-  }, [searchText, student]);
+  }, [searchInput, student]);
 
   return (
     <div>
