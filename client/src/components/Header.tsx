@@ -1,5 +1,5 @@
 import { type ChangeEventHandler, useContext } from "react";
-import { SearchContext } from "../../contexts/SearchContextProvider";
+import { SearchContext } from "../contexts/SearchContextProvider";
 
 const Header = () => {
   const { searchInput, setSearchInput } = useContext(SearchContext);

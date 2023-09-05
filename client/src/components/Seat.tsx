@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { Student } from "../../types";
+import { Student } from "../types";
 
 const Seat: FC<{ student: Student; searchText: string }> = ({
   student,

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Seat from "../Seat/Seat";
-import { Student } from "../../types";
+import Seat from "./Seat";
+import { Student } from "../types";
 
 const Column: FC<{
   rowCount: number;

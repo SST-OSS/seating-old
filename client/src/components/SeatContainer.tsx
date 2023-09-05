@@ -1,8 +1,8 @@
-import Column from "../Column/Column";
-import { structure } from "../../util/data";
+import Column from "./Column";
+import { structure } from "../util/data";
 import { FC, useContext } from "react";
-import { Student } from "../../types";
-import { SearchContext } from "../../contexts/SearchContextProvider";
+import { Student } from "../types";
+import { SearchContext } from "../contexts/SearchContextProvider";
 
 const SeatContainer: FC<{ data: Student[] }> = ({ data }) => {
   const { searchInput } = useContext(SearchContext);
